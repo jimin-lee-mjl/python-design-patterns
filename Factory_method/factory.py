@@ -1,7 +1,31 @@
 import random
+from abc import ABCMeta, abstractmethod
 
 
-class YellowBall:
+class CustomAbstractMetaClass(ABCMeta):
+    required_attributes = []
+
+    def __call__(self, *args, **kwargs):
+        obj = super(CustomAbstractMetaClass, self).__call__(*args, **kwargs)
+        for attr_name in obj.required_attributes:
+            if not getattr(obj, attr_name):
+                raise ValueError('required attribute (%s) not set' % attr_name)
+        return obj
+
+
+
+
+
+
+class Pokeball(metaclass=CustomAbstractMetaClass):
+    required_attributes = ['color', 'price', 'options']
+
+    @abstractmethod
+    def get_pokemon(self):
+        """returns pokemon"""
+        
+
+class YellowBall(Pokeball):
     def __init__(self):
         self.color = '노란색'
         self.price = 30000
@@ -14,7 +38,7 @@ class YellowBall:
         return pokemon
         
 
-class GreenBall:
+class GreenBall(Pokeball):
     def __init__(self):
         self.color = '초록색'
         self.price = 50000
@@ -27,7 +51,7 @@ class GreenBall:
         return pokemon
 
 
-class RedBall:
+class RedBall(Pokeball):
     def __init__(self):
         self.color = '빨간색'
         self.price = 70000
