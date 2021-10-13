@@ -8,28 +8,31 @@ def wait_for_job():
 
 
 class Attendance:
+    """실제 근태 기록"""
     user = 'Real user'
 
 
 class TestAttendance:
+    """테스트용 근태 기록"""
     user = 'Test user'
 
 
 class ApprovalBuilder(metaclass=ABCMeta):
     @abstractmethod
     def create_approval_form(self):
-        pass
+        """결재폼을 생성하는 메서드"""
 
     @abstractmethod
     def create_attendance_form(self):
-        pass
+        """근태 기록을 생성하는 메서드"""
 
     @abstractmethod
     def notify_approvers(self):
-        pass
+        """결재자에게 알림을 발송하는 메서드"""
 
     def update_leave(self):
-        pass 
+        """잔여 연차를 업데이트하는 메서드"""
+        pass
 
 
 class OffAprrovalBuilder(ApprovalBuilder):

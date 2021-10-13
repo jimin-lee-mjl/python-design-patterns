@@ -4,5 +4,6 @@ python design pattern 공부 기록입니다.
 
 ## Included Patterns
 
-- Abstract Factory Pattern
 - Factory Method Pattern
+- Abstract Factory Pattern
+- Builder Pattern
