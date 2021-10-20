@@ -84,3 +84,12 @@ Borg 패턴은 복수의 인스턴스 생성이 가능 vs Singleton 패턴은 �
 **policy**
 - 정책은 변하지 않는 부분
 - 하나의 사항이 변경되면 다른 인스턴스들의 상태도 변경되어야 함
+
+
+<br />
+<br />
+
+## 📚 Reference
+- [https://youtu.be/Yj-4q17lZuc](https://youtu.be/Yj-4q17lZuc)
+- [https://subscription.packtpub.com/book/application-development/9781783283378/2/ch02lvl1sec16/the-borg-singleton](https://subscription.packtpub.com/book/application-development/9781783283378/2/ch02lvl1sec16/the-borg-singleton)
+- [http://www.aleax.it/Python/5ep.html](http://www.aleax.it/Python/5ep.html)
