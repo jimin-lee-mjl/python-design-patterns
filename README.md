@@ -8,3 +8,4 @@ python design pattern 공부 기록입니다.
 - Abstract Factory Pattern
 - Builder Pattern
 - Borg Pattern
+- Observer Pattern
